@@ -8,6 +8,9 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
-n = int(input("Enter a positive integer: "))
-for i in range(1, n+1):
-    print(f"The {i}th Fibonacci number is: {fib(i)}")
+num = int(input("Enter a positive integer: "))
+for n in range(1, num+1):
+    print(f"The {n}th Fibonacci number is: {fib(n)}")
+    print(fib(num))
+    
+
