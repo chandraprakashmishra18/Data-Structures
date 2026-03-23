@@ -25,7 +25,7 @@ class StackADT:
 
     # pop = method name for removing top element from stack
     def pop(self):
-
+    
         # if = decision keyword (checks a condition)
         # self.is_empty() = calling our own method to check if stack is empty
         # () means "call this function now"
@@ -80,41 +80,41 @@ class StackADT:
 # def = define a function (this is not inside class, so it's a normal function)
 # reverse_string_using_stack = function name
 # (s) = parameter; s will store the input string given by user
-def reverse_string_using_stack(s):
+# def reverse_string_using_stack(s):
 
-    # st = variable name (short for stack)
-    # StackADT() = creating a new stack object by calling class constructor
-    st = StackADT()
+#     # st = variable name (short for stack)
+#     # StackADT() = creating a new stack object by calling class constructor
+#     st = StackADT()
 
-    # for = loop keyword (repeat for each element)
-    # ch = loop variable (will take each character one by one)
-    # in = keyword used to iterate through items of a collection
-    # s = the input string (strings are iterable character by character)
-    # : starts the for-loop block
-    for ch in s:
+#     # for = loop keyword (repeat for each element)
+#     # ch = loop variable (will take each character one by one)
+#     # in = keyword used to iterate through items of a collection
+#     # s = the input string (strings are iterable character by character)
+#     # : starts the for-loop block
+#     for ch in s:
 
-        # st.push(ch) pushes each character into stack
-        st.push(ch)
+#         # st.push(ch) pushes each character into stack
+#         st.push(ch)
 
-    # rev = variable to store reversed string
-    # "" = empty string
-    rev = ""
+#     # rev = variable to store reversed string
+#     # "" = empty string
+#     rev = ""
 
-    # while = loop keyword (runs again and again while condition is True)
-    # not = logical operator that reverses True/False
-    # st.is_empty() returns True if stack empty
-    # not st.is_empty() means "loop until stack becomes empty"
-    # : starts the while-loop block
-    while not st.is_empty():
+#     # while = loop keyword (runs again and again while condition is True)
+#     # not = logical operator that reverses True/False
+#     # st.is_empty() returns True if stack empty
+#     # not st.is_empty() means "loop until stack becomes empty"
+#     # : starts the while-loop block
+#     while not st.is_empty():
 
-        # rev += st.pop()
-        # += means "append/add and store back"
-        # st.pop() removes top character from stack
-        # adding popped characters builds reversed string
-        rev += st.pop()
+#         # rev += st.pop()
+#         # += means "append/add and store back"
+#         # st.pop() removes top character from stack
+#         # adding popped characters builds reversed string
+#         rev += st.pop()
 
-    # return rev sends the final reversed string back
-    return rev
+#     # return rev sends the final reversed string back
+#     return rev
 
 
 # main = function that runs the menu program (good practice to separate logic)
@@ -203,13 +203,13 @@ def main():
             print("Stack (bottom -> top):", st.display())
 
         # elif choice == "7" reverse string demo using stack
-        elif choice == "7":
+        # elif choice == "7":
 
-            # take a string from user
-            s = input("Enter a string to reverse: ")
+        #     # take a string from user
+        #     s = input("Enter a string to reverse: ")
 
-            # call reverse_string_using_stack(s) and print result
-            print("Reversed string:", reverse_string_using_stack(s))
+        #     # call reverse_string_using_stack(s) and print result
+        #     print("Reversed string:", reverse_string_using_stack(s))
 
         # elif choice == "0" exit program
         elif choice == "0":

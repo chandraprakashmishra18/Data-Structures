@@ -35,7 +35,7 @@ def infix_to_postfix(expression):
             while stack and stack[-1] != '(':
                 postfix += stack.pop()
             stack.pop()  # Remove '(' from stack
-
+     
         # If operator
         else:
             # Pop operators from stack while they have higher or equal precedence

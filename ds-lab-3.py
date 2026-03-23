@@ -1,61 +1,84 @@
-
-class stack:
+class StackADT:
     def __init__(self):
-        self.items = []
-    
-    def is_empty(self):
-        return len(self.items)==0
-    
-    def push(self, x):
-        self.items.append(x)
+        self.list = []
+        
+    def push(self , x):
+        self.list.append(x)
         
     def pop(self):
-        if self.is_empty():
-            return "Stack is empty"
+        if len(self.list) == 0:
+            return "Underflow"
         else:
-            return self.items.pop()
+            return self.list.pop()
     
     def peek(self):
-        if not self.is__empty():
-            return self.items[-1]
+        if len(self.list) == 0:
+            return "Underflow"
         else:
-            return "stack is empty"
+            return self.list[-1]
+        
+    def isEmpty(self):
+        if len(self.list) == 0:
+            return "True"
+        else:
+            return "False"
         
     def size(self):
-        return len(self.items)
+        return len(self.list)
     
     def display(self):
-        return self.items
+        if len(self.list) == 0:
+            print("Stack is empty")
+        else:
+            print("Stack elements:", self.list)
     
-    def menu(self):
+def menu():
+    st = StackADT()
+    
+    while True:
+    
+        print("\n--- STACK ADT MENU ---")
+
+        # printing menu options
         print("1. Push")
         print("2. Pop")
         print("3. Peek")
-        print("4. Size")
-        print("5. Display")
-        print("6. Exit")
-items=stack()
-items.menu() 
-choice = int(input("Enter your choice: "))
-while True:
- if choice == 1:
-                x = int(input("enter value to push: "))
-                items.push(x)
-                print("pushed", x)
- elif choice == 2:
-                print("popped value:", items.pop())
- elif choice == 3:
-                print("top value:", items.peek())
- elif choice == 4:
-                print("size of stack:", items.size())
- elif choice == 5:
-                print("stack elements:", items.display())
- else:
-                print("invalid choice")
-               
-                
+        print("4. isEmpty")
+        print("5. Size")
+        print("6. Display Stack")
+        print("7. Reverse a String (Meaningful Use)")
+        print("0. Exit")
+        
+        choice = int(input("Enter your choice: "))
+        
+        if choice == 1:
+            val = input("Enter your value : ")
+            st.push(val)
             
-                
+        elif choice == 2:
+            removed = st.pop()
+            print(removed)
             
+        elif choice == 3:
+            top = st.peek()
+            print(top)
             
+        elif choice == 4:
+            empty = st.isEmpty()
+            print(empty)
+            
+        elif choice == 5:
+            print(st.size())
+            
+        elif choice == 6:
+            st.display()
+            
+        elif choice == 0:
+            print("Thank you ")
+            break 
+        
+        else:
+            print("You entered an invalid input")
+            
+menu()
             
