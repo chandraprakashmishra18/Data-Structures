@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class StackADT:
     def __init__(self):
         self.list = []
@@ -82,3 +83,29 @@ def menu():
             
 menu()
             
+=======
+class StackADT:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return len(self.items) == 0
+    
+    def push(self, item):
+        self.items.append(item)
+    def pop(self):
+        if self.is_empty():
+            print("pop from empty stack")
+        return self.items.pop()
+    def peek(self):
+        if self.is_empty():
+            print("peek from empty stack")
+        return self.items[-1]
+    def size(self):
+        return len(self.items)
+    def clear(self):
+        self.items = []
+    def display(self):
+        return self.items[::-1]
+    def search(self, item):
+>>>>>>> ed2f51ce4940f185166ddd19bbe02f7be81f4ba2
