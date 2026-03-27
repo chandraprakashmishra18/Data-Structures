@@ -1,3 +1,5 @@
+# For Descending Order:
+# ---------------------------------------
 # def selectionsort(arr):
 #     n = len(arr)
     
@@ -5,7 +7,7 @@
 #         min_idx = i
         
 #         for j in range (i+1,n):
-#             if arr[j] < arr[min_idx]:
+#             if arr[j] > arr[min_idx]:
 #                 min_idx = j
                 
 #         arr[i],arr[min_idx] = arr[min_idx],arr[i]
@@ -15,6 +17,8 @@
 # arr1 = [4,5,3,6,9,1,2]
 # print(selectionsort(arr1))
                 
+                # ----------------------------------------
+                # ----------------------------------------
 def selection_sort(arr):
     n = len(arr)
     
@@ -31,3 +35,7 @@ def selection_sort(arr):
 
 arr1 = [4,5,3,6,9,1,2]
 print(selection_sort(arr1))
+
+# priority queue
+# singly linked list using stack and queue
+# in doubly linked list
