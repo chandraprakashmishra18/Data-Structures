@@ -10,4 +10,3 @@ def merge_sort(arr):
 
 def merge(left_arr,right_arr):
     
-    
