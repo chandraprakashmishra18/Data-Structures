@@ -1,11 +1,23 @@
 def merge_sort(arr):
-    if len(arr)<=1:
+    if len(arr)<1:
         return arr
     
     mid = len(arr)//2
-    left_arr = merge_sort(arr[:mid])
-    right_arr = merge_sort(arr[mid:])
+    left = merge(arr[0:mid])
+    right = merge(arr[mid:])
+    return merge(left,right)
     
-    return merge(left_arr,right_arr)
-
-def merge(left_arr,right_arr)
+def merge(left,right):
+    result = []
+    i = j = 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+        else:
+            result.append(right[j])
+    
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+    
+    
