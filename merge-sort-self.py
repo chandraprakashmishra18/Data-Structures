@@ -8,5 +8,4 @@ def merge_sort(arr):
     
     return merge(left_arr,right_arr)
 
-def merge(left_arr,right_arr):
-    
+def merge(left_arr,right_arr)
